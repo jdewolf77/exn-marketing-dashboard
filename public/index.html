@@ -22,7 +22,7 @@
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 0 auto;
         }
 
@@ -87,17 +87,6 @@
             box-shadow: 0 2px 8px rgba(83, 74, 183, 0.2);
         }
 
-        .btn-toggle {
-            background: white;
-            color: #9E007E;
-            border: 1px solid #9E007E;
-        }
-
-        .btn-toggle.active {
-            background: #9E007E;
-            color: white;
-        }
-
         button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -127,7 +116,7 @@
 
         .filter-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 12px;
         }
 
@@ -136,7 +125,7 @@
         }
 
         .filter-select label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: #666;
             display: block;
@@ -146,11 +135,11 @@
 
         .filter-button {
             width: 100%;
-            padding: 10px 12px;
+            padding: 8px 10px;
             background: white;
             border: 1px solid #ddd;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -170,10 +159,10 @@
             background: white;
             border: 1px solid #ddd;
             border-radius: 6px;
-            margin-top: 4px;
+            margin-top: 2px;
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            max-height: 250px;
+            max-height: 200px;
             overflow-y: auto;
             display: none;
         }
@@ -185,9 +174,9 @@
         .filter-option {
             display: flex;
             align-items: center;
-            padding: 10px 12px;
+            padding: 8px 10px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             border-bottom: 0.5px solid #f0f0f0;
         }
 
@@ -202,7 +191,7 @@
 
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
             margin-bottom: 24px;
         }
@@ -210,18 +199,13 @@
         .kpi-card {
             background: white;
             border-radius: 12px;
-            padding: 22px;
+            padding: 18px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             border: 1px solid #e8e8e8;
         }
 
-        .kpi-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(158, 0, 126, 0.12);
-        }
-
         .kpi-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: #999;
             text-transform: uppercase;
@@ -230,20 +214,20 @@
         }
 
         .kpi-value {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: #9E007E;
         }
 
         .kpi-subtext {
-            font-size: 12px;
+            font-size: 11px;
             color: #999;
         }
 
         .charts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 20px;
             margin-bottom: 24px;
         }
@@ -251,14 +235,14 @@
         .chart-card {
             background: white;
             border-radius: 12px;
-            padding: 24px;
+            padding: 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             border: 1px solid #e8e8e8;
         }
 
         .chart-card h3 {
-            margin: 0 0 16px 0;
-            font-size: 16px;
+            margin: 0 0 14px 0;
+            font-size: 14px;
             font-weight: 700;
             color: #333;
         }
@@ -266,7 +250,7 @@
         .bar-chart {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .bar-item {
@@ -281,31 +265,36 @@
         .bar-label {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 4px;
-            font-size: 12px;
+            margin-bottom: 3px;
+            font-size: 11px;
         }
 
         .bar-label-name {
             color: #666;
             font-weight: 500;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .bar-label-value {
             color: #9E007E;
             font-weight: 700;
+            margin-left: 8px;
         }
 
         .bar {
-            height: 8px;
+            height: 6px;
             background: #f0f0f0;
-            border-radius: 4px;
+            border-radius: 3px;
             overflow: hidden;
         }
 
         .bar-fill {
             height: 100%;
             background: #9E007E;
-            border-radius: 4px;
+            border-radius: 3px;
         }
 
         .loading {
@@ -328,6 +317,34 @@
             to { transform: rotate(360deg); }
         }
 
+        .error-box {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            color: #721c24;
+            display: none;
+        }
+
+        .error-box.show {
+            display: block;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            color: #0c5460;
+            display: none;
+        }
+
+        .info-box.show {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -338,8 +355,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .kpi-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .filter-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
         }
     </style>
@@ -349,7 +366,7 @@
         <div class="header">
             <div class="header-left">
                 <h1>📈 PANW Marketing Dashboard</h1>
-                <p>Updated: <span id="lastUpdated">Loading...</span></p>
+                <p>Updated: <span id="lastUpdated">Loading...</span> • <span id="dataSource">Fetching live data...</span></p>
             </div>
             <div class="header-right">
                 <button class="btn-secondary" onclick="exportCSV()">📥 Export CSV</button>
@@ -357,16 +374,20 @@
             </div>
         </div>
 
+        <div class="error-box" id="errorBox"></div>
+        <div class="info-box" id="infoBox"></div>
+
         <div class="filters">
             <div class="filters-header">
                 <h3>Filters <span id="filterCount"></span></h3>
+                <button style="background:none; border:none; color:#9E007E; text-decoration:underline; padding:0; cursor:pointer; font-size:13px; font-weight:600;" onclick="clearAllFilters()" id="clearBtn" style="display:none;">Clear All</button>
             </div>
             <div class="filter-grid" id="filterGrid"></div>
         </div>
 
         <div class="loading" id="loadingState">
             <div class="spinner">⏳</div>
-            <div>Loading dashboard data...</div>
+            <div>Loading live Smartsheet data...</div>
         </div>
 
         <div id="mainContent" style="display: none;">
@@ -380,82 +401,90 @@
         let filteredData = null;
         let currentFilters = {};
 
-        // Fallback demo data in case API fails
-        const demoData = {
-            rows: [
-                { cells: ['FY26', 'Q2', '2025-11-01', '2026-01-31', 'NORTH', 'Sweden', 'Mia', 'Weekly newsletter', 'Mailing/Newsletter', 'Portfolio', 'N/A', 'FY26QQ- Exclusive Networks Sweden MDF Activities', '1400.0', '0.0', '0.0'] },
-                { cells: ['FY26', 'Q3', '2025-11-03', '2026-04-30', 'NORTH', 'Sweden', 'Mia', 'ABM-funded LinkedIn campaign targeting CISOs', 'Social Media', 'Prisma SASE', 'SASE Supercharge', 'Exclusive Networks (Mgd)-HS-MSP-SASE 2026', '200', '5000', '2500'] },
-                { cells: ['FY26', 'Q3', '2025-11-05', '2026-12-31', 'CENTRAL', 'Switzerland', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '500', '3500', '1200'] },
-                { cells: ['FY26', 'Q3', '2025-11-06', '2026-12-31', 'SOUTH', 'Italy', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '600', '4200', '1800'] },
-                { cells: ['FY26', 'Q3', '2025-11-06', '2026-12-31', 'CENTRAL', 'Germany', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '450', '3800', '1400'] },
-                { cells: ['FY26', 'Q2', '2025-11-07', '2025-11-07', 'NORTH', 'Denmark', 'Jette', 'Fredagsspiller - Techies play date', 'Other', 'Portfolio', 'N/A', 'FY26QQ-Exclusive Networks Denmark', '30', '3000', '1500'] },
-                { cells: ['FY26', 'Q3', '2025-11-10', '2026-12-31', 'NORTH', 'UK', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '550', '4100', '1600'] },
-                { cells: ['FY26', 'Q2', '2025-11-12', '2025-11-12', 'NORTH', 'Finland', 'Elli', 'Atea Focus', 'Conference/Exhibition', 'Portfolio', 'N/A', 'FY26_Atea_FI_MarketingCampaign', '100', '234000', '25000'] },
-                { cells: ['FY26', 'Q3', '2025-11-12', '2026-12-31', 'NORTH', 'UK', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '480', '3900', '1350'] },
-                { cells: ['FY26', 'Q2', '2025-11-19', '2026-01-31', 'NORTH', 'Finland', 'Elli', 'Telemarketing Campaign DMP', 'Telemarketing', 'Portfolio', 'N/A', 'FY26QQ-Exclusive Networks Finland MDF Activities', '20', '7500', '7500'] }
-            ],
-            columns: [
-                { title: 'PANW Fiscal Year' },
-                { title: 'PANW Fiscal Quarter' },
-                { title: 'Start Date' },
-                { title: 'End Date' },
-                { title: 'REGION' },
-                { title: 'Country' },
-                { title: 'Marketing Lead' },
-                { title: 'Activity Name' },
-                { title: 'Activity Type' },
-                { title: 'Main Product Focus' },
-                { title: 'Global Campaign' },
-                { title: 'PANW Campaign Code' },
-                { title: 'Expected Result' },
-                { title: 'Total Cost (USD)' },
-                { title: 'PANW Funding MDF (USD)' }
-            ]
-        };
+        const filterColumns = [
+            'PANW Fiscal Year',
+            'PANW Fiscal Quarter',
+            'REGION',
+            'Country',
+            'Marketing Lead',
+            'Initated by',
+            'Main Product Focus',
+            'Global Campaign',
+            'Activity Type',
+            'Main Activity Goal',
+            'Main Target Audience'
+        ];
 
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
-            // Auto-refresh every 5 minutes
-            setInterval(loadData, 300000);
+            setInterval(loadData, 300000); // Auto-refresh every 5 minutes
         });
 
         async function loadData() {
             try {
-                const response = await fetch('/api/data');
-                if (response.ok) {
-                    sheetData = await response.json();
-                } else {
-                    console.warn('Failed to fetch live data, using demo data');
-                    sheetData = demoData;
-                }
-            } catch (error) {
-                console.warn('Error fetching live data:', error);
-                sheetData = demoData;
-            }
+                // Fetch from Vercel API endpoint (uses Claude to get Smartsheet data)
+                const response = await fetch('/api/smartsheet');
 
-            filteredData = sheetData;
-            initializeFilters();
-            renderDashboard();
-            updateLastUpdated();
-            document.getElementById('loadingState').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (!data.rows || !data.columns) {
+                    throw new Error('Invalid data format from API');
+                }
+
+                // Transform data format
+                sheetData = {
+                    columns: data.columns,
+                    rows: data.rows
+                };
+
+                filteredData = sheetData;
+                initializeFilters();
+                renderDashboard();
+                updateLastUpdated();
+                document.getElementById('dataSource').textContent = `✅ Live data • ${sheetData.rows.length} activities`;
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                document.getElementById('errorBox').classList.remove('show');
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showError('Failed to load data: ' + error.message + '<br><br>Make sure ANTHROPIC_API_KEY is set in Vercel environment variables.');
+                document.getElementById('loadingState').style.display = 'none';
+            }
+        }
+
+        function showError(message) {
+            const errorBox = document.getElementById('errorBox');
+            errorBox.innerHTML = '❌ ' + message;
+            errorBox.classList.add('show');
+        }
+
+        function showInfo(message) {
+            const infoBox = document.getElementById('infoBox');
+            infoBox.innerHTML = 'ℹ️ ' + message;
+            infoBox.classList.add('show');
         }
 
         function initializeFilters() {
-            const filterColumns = ['REGION', 'Global Campaign', 'PANW Fiscal Quarter', 'Activity Type', 'Country', 'Marketing Lead'];
-            const labels = ['Region', 'Campaign', 'Quarter', 'Activity Type', 'Country', 'Marketing Lead'];
             const filterGrid = document.getElementById('filterGrid');
             filterGrid.innerHTML = '';
 
-            filterColumns.forEach((columnName, idx) => {
-                const colIdx = demoData.columns.findIndex(c => c.title === columnName);
+            filterColumns.forEach(columnName => {
+                const colIdx = sheetData.columns.findIndex(c => c.title === columnName);
                 if (colIdx === -1) return;
 
-                const values = [...new Set(demoData.rows.map(row => row.cells[colIdx]).filter(v => v))].sort();
+                const values = [...new Set(sheetData.rows
+                    .map(row => row.cells[colIdx])
+                    .filter(v => v && v !== '-' && v !== 'N/A')
+                )].sort();
 
                 const filterHTML = `
                     <div class="filter-select">
-                        <label>${labels[idx]}</label>
+                        <label>${columnName}</label>
                         <div class="filter-button active" onclick="toggleFilter(this)">
                             <span>All</span>
                             <span>▼</span>
@@ -471,7 +500,7 @@
                 values.forEach(val => {
                     const label = document.createElement('label');
                     label.className = 'filter-option';
-                    label.innerHTML = `<input type="checkbox" onchange="applyFilters('${columnName}', '${val}', this.checked)"> ${val}`;
+                    label.innerHTML = `<input type="checkbox" onchange="applyFilters('${columnName}', '${val.replace(/'/g, "\\'")}', this.checked)"> ${val}`;
                     dropdown.appendChild(label);
                 });
 
@@ -492,17 +521,26 @@
                 currentFilters[column] = currentFilters[column].filter(v => v !== value);
             }
 
-            let filtered = demoData.rows;
+            let filtered = sheetData.rows;
             Object.keys(currentFilters).forEach(col => {
                 if (currentFilters[col].length > 0) {
-                    const colIdx = demoData.columns.findIndex(c => c.title === col);
+                    const colIdx = sheetData.columns.findIndex(c => c.title === col);
                     if (colIdx !== -1) {
                         filtered = filtered.filter(row => currentFilters[col].includes(row.cells[colIdx]));
                     }
                 }
             });
 
-            filteredData = { ...demoData, rows: filtered };
+            filteredData = { ...sheetData, rows: filtered };
+            renderDashboard();
+            updateFilterCount();
+        }
+
+        function clearAllFilters() {
+            document.querySelectorAll('.filter-option input').forEach(input => input.checked = false);
+            currentFilters = {};
+            filterColumns.forEach(col => currentFilters[col] = []);
+            filteredData = { ...sheetData, rows: [...sheetData.rows] };
             renderDashboard();
             updateFilterCount();
         }
@@ -510,6 +548,7 @@
         function updateFilterCount() {
             const count = Object.values(currentFilters).flat().length;
             document.getElementById('filterCount').textContent = count > 0 ? `(${count} active)` : '';
+            document.getElementById('clearBtn').style.display = count > 0 ? 'block' : 'none';
         }
 
         function renderDashboard() {
@@ -523,45 +562,61 @@
                 totalActivities: data.rows.length,
                 totalCost: 0,
                 totalMDF: 0,
+                totalInvestment: 0,
+                totalPipeline: 0,
+                byProductFocus: {},
+                byActivityType: {},
+                byGoal: {},
+                byAudience: {},
                 byRegion: {},
                 byCampaign: {},
                 byQuarter: {},
-                byActivityType: {},
-                topCountries: {},
-                topLeads: {},
-                costTrend: {},
-                regionalSpend: {}
+                costByProductFocus: {},
+                costByActivityType: {},
+                costByGoal: {}
             };
 
             const costIdx = data.columns.findIndex(c => c.title === 'Total Cost (USD)');
             const mdfIdx = data.columns.findIndex(c => c.title === 'PANW Funding MDF (USD)');
+            const investmentIdx = data.columns.findIndex(c => c.title === 'Reseller Investment (USD)');
+            const pipelineIdx = data.columns.findIndex(c => c.title === 'Expected Pipeline Revenue (USD)');
+            const productIdx = data.columns.findIndex(c => c.title === 'Main Product Focus');
+            const typeIdx = data.columns.findIndex(c => c.title === 'Activity Type');
+            const goalIdx = data.columns.findIndex(c => c.title === 'Main Activity Goal');
+            const audienceIdx = data.columns.findIndex(c => c.title === 'Main Target Audience');
             const regionIdx = data.columns.findIndex(c => c.title === 'REGION');
             const campaignIdx = data.columns.findIndex(c => c.title === 'Global Campaign');
             const quarterIdx = data.columns.findIndex(c => c.title === 'PANW Fiscal Quarter');
-            const typeIdx = data.columns.findIndex(c => c.title === 'Activity Type');
-            const countryIdx = data.columns.findIndex(c => c.title === 'Country');
-            const leadIdx = data.columns.findIndex(c => c.title === 'Marketing Lead');
 
             data.rows.forEach(row => {
                 const cost = parseFloat(row.cells[costIdx]) || 0;
                 const mdf = parseFloat(row.cells[mdfIdx]) || 0;
+                const investment = parseFloat(row.cells[investmentIdx]) || 0;
+                const pipeline = parseFloat(row.cells[pipelineIdx]) || 0;
+                const product = row.cells[productIdx] || 'N/A';
+                const type = row.cells[typeIdx] || 'N/A';
+                const goal = row.cells[goalIdx] || 'N/A';
+                const audience = row.cells[audienceIdx] || 'N/A';
                 const region = row.cells[regionIdx] || 'N/A';
-                const campaign = row.cells[campaignIdx] || 'Other';
+                const campaign = row.cells[campaignIdx] || 'N/A';
                 const quarter = row.cells[quarterIdx] || 'N/A';
-                const actType = row.cells[typeIdx] || 'N/A';
-                const country = row.cells[countryIdx] || 'N/A';
-                const lead = row.cells[leadIdx] || 'Unassigned';
 
                 metrics.totalCost += cost;
                 metrics.totalMDF += mdf;
+                metrics.totalInvestment += investment;
+                metrics.totalPipeline += pipeline;
+
+                metrics.byProductFocus[product] = (metrics.byProductFocus[product] || 0) + 1;
+                metrics.byActivityType[type] = (metrics.byActivityType[type] || 0) + 1;
+                metrics.byGoal[goal] = (metrics.byGoal[goal] || 0) + 1;
+                metrics.byAudience[audience] = (metrics.byAudience[audience] || 0) + 1;
                 metrics.byRegion[region] = (metrics.byRegion[region] || 0) + 1;
                 metrics.byCampaign[campaign] = (metrics.byCampaign[campaign] || 0) + 1;
                 metrics.byQuarter[quarter] = (metrics.byQuarter[quarter] || 0) + 1;
-                metrics.byActivityType[actType] = (metrics.byActivityType[actType] || 0) + 1;
-                metrics.topCountries[country] = (metrics.topCountries[country] || 0) + 1;
-                metrics.topLeads[lead] = (metrics.topLeads[lead] || 0) + 1;
-                metrics.costTrend[quarter] = (metrics.costTrend[quarter] || 0) + cost;
-                metrics.regionalSpend[region] = (metrics.regionalSpend[region] || 0) + cost;
+
+                metrics.costByProductFocus[product] = (metrics.costByProductFocus[product] || 0) + cost;
+                metrics.costByActivityType[type] = (metrics.costByActivityType[type] || 0) + cost;
+                metrics.costByGoal[goal] = (metrics.costByGoal[goal] || 0) + cost;
             });
 
             return metrics;
@@ -575,17 +630,27 @@
                     <p class="kpi-subtext">In current filter</p>
                 </div>
                 <div class="kpi-card">
-                    <p class="kpi-label">Total Budget</p>
+                    <p class="kpi-label">Marketing Investment</p>
                     <p class="kpi-value">€${(metrics.totalCost / 1000).toFixed(1)}k</p>
-                    <p class="kpi-subtext">Total spend</p>
+                    <p class="kpi-subtext">Total cost</p>
                 </div>
                 <div class="kpi-card">
-                    <p class="kpi-label">PANW MDF</p>
+                    <p class="kpi-label">PANW MDF Funding</p>
                     <p class="kpi-value">€${(metrics.totalMDF / 1000).toFixed(1)}k</p>
-                    <p class="kpi-subtext">Marketing funding</p>
+                    <p class="kpi-subtext">MDF allocation</p>
                 </div>
                 <div class="kpi-card">
-                    <p class="kpi-label">Avg Cost</p>
+                    <p class="kpi-label">Pipeline Impact</p>
+                    <p class="kpi-value">€${(metrics.totalPipeline / 1000000).toFixed(1)}M</p>
+                    <p class="kpi-subtext">Expected revenue</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Partner Investment</p>
+                    <p class="kpi-value">€${(metrics.totalInvestment / 1000).toFixed(1)}k</p>
+                    <p class="kpi-subtext">Reseller investment</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Avg Activity Cost</p>
                     <p class="kpi-value">€${Math.round(metrics.totalCost / (metrics.totalActivities || 1))}</p>
                     <p class="kpi-subtext">Per activity</p>
                 </div>
@@ -596,28 +661,44 @@
         function renderCharts(metrics) {
             const html = `
                 <div class="chart-card">
+                    <h3>Activities by Product Focus</h3>
+                    ${createBarChart(Object.entries(metrics.byProductFocus).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#9E007E')}
+                </div>
+                <div class="chart-card">
+                    <h3>Investment by Product Focus</h3>
+                    ${createBarChart(Object.entries(metrics.costByProductFocus).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#7F77DD', true)}
+                </div>
+                <div class="chart-card">
+                    <h3>Activities by Type</h3>
+                    ${createBarChart(Object.entries(metrics.byActivityType).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#1D9E75')}
+                </div>
+                <div class="chart-card">
+                    <h3>Investment by Activity Type</h3>
+                    ${createBarChart(Object.entries(metrics.costByActivityType).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#D85A30', true)}
+                </div>
+                <div class="chart-card">
+                    <h3>Activities by Main Goal</h3>
+                    ${createBarChart(Object.entries(metrics.byGoal).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#BA7517')}
+                </div>
+                <div class="chart-card">
+                    <h3>Investment by Main Goal</h3>
+                    ${createBarChart(Object.entries(metrics.costByGoal).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#0F6E56', true)}
+                </div>
+                <div class="chart-card">
+                    <h3>Activities by Target Audience</h3>
+                    ${createBarChart(Object.entries(metrics.byAudience).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#534AB7')}
+                </div>
+                <div class="chart-card">
                     <h3>Activities by Region</h3>
                     ${createBarChart(Object.entries(metrics.byRegion).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#9E007E')}
                 </div>
                 <div class="chart-card">
-                    <h3>Budget by Region</h3>
-                    ${createBarChart(Object.entries(metrics.regionalSpend).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#7F77DD', true)}
-                </div>
-                <div class="chart-card">
                     <h3>Activities by Campaign</h3>
-                    ${createBarChart(Object.entries(metrics.byCampaign).filter(([k]) => k !== 'Other' && k !== '').sort((a, b) => b[1] - a[1]), '#1D9E75')}
-                </div>
-                <div class="chart-card">
-                    <h3>Top Countries</h3>
-                    ${createBarChart(Object.entries(metrics.topCountries).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#D85A30')}
-                </div>
-                <div class="chart-card">
-                    <h3>Activities by Lead</h3>
-                    ${createBarChart(Object.entries(metrics.topLeads).sort((a, b) => b[1] - a[1]), '#BA7517')}
+                    ${createBarChart(Object.entries(metrics.byCampaign).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#FF6B6B')}
                 </div>
                 <div class="chart-card">
                     <h3>Activities by Quarter</h3>
-                    ${createBarChart(Object.entries(metrics.byQuarter).filter(([k]) => k !== 'N/A').sort(), '#0F6E56')}
+                    ${createBarChart(Object.entries(metrics.byQuarter).filter(([k]) => k !== 'N/A').sort(), '#4ECDC4')}
                 </div>
             `;
             document.getElementById('chartsGrid').innerHTML = html;
@@ -646,6 +727,7 @@
         }
 
         function exportCSV() {
+            if (!filteredData) return;
             const headers = filteredData.columns.map(col => col.title);
             let csv = headers.map(h => `"${h}"`).join(',') + '\n';
 
@@ -664,7 +746,7 @@
         }
 
         function refreshData() {
-            updateLastUpdated();
+            loadData();
         }
 
         function updateLastUpdated() {
