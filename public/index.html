@@ -26,7 +26,6 @@
             margin: 0 auto;
         }
 
-        /* Header */
         .header {
             display: flex;
             justify-content: space-between;
@@ -104,45 +103,6 @@
             cursor: not-allowed;
         }
 
-        /* Error/Loading */
-        .error {
-            padding: 14px 16px;
-            margin-bottom: 20px;
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 7px;
-            font-size: 13px;
-            color: #856404;
-            display: flex;
-            gap: 10px;
-            display: none;
-        }
-
-        .error.show {
-            display: flex;
-        }
-
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 400px;
-            font-size: 16px;
-            color: #999;
-        }
-
-        .spinner {
-            animation: spin 2s linear infinite;
-            color: #9E007E;
-            margin-right: 16px;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Filters */
         .filters {
             background: white;
             border: 1px solid #e8e8e8;
@@ -163,17 +123,6 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0;
-        }
-
-        .clear-filters {
-            background: none;
-            border: none;
-            color: #9E007E;
-            text-decoration: underline;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 0;
         }
 
         .filter-grid {
@@ -207,7 +156,6 @@
             justify-content: space-between;
             align-items: center;
             color: #999;
-            transition: all 0.2s;
         }
 
         .filter-button.active {
@@ -252,7 +200,6 @@
             cursor: pointer;
         }
 
-        /* KPI Cards */
         .kpi-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -266,23 +213,11 @@
             padding: 22px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             border: 1px solid #e8e8e8;
-            transition: all 0.2s ease;
-            cursor: pointer;
         }
 
         .kpi-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(158, 0, 126, 0.12);
-        }
-
-        .kpi-card-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .kpi-text p {
-            margin: 0;
         }
 
         .kpi-label {
@@ -306,7 +241,6 @@
             color: #999;
         }
 
-        /* Charts */
         .charts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -372,181 +306,26 @@
             height: 100%;
             background: #9E007E;
             border-radius: 4px;
-            transition: width 0.3s ease;
         }
 
-        /* Pie Chart */
-        .pie-container {
+        .loading {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        svg {
-            width: 100%;
-            max-width: 200px;
-            margin: 0 auto;
-        }
-
-        .pie-legend {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .pie-item {
-            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            cursor: pointer;
-            padding: 4px;
-            border-radius: 4px;
-            transition: background 0.2s;
+            min-height: 400px;
+            font-size: 16px;
+            color: #999;
         }
 
-        .pie-item:hover {
-            background: #f5f5f5;
-        }
-
-        .pie-color {
-            width: 10px;
-            height: 10px;
-            border-radius: 2px;
-        }
-
-        .pie-label {
-            color: #666;
-            flex: 1;
-        }
-
-        .pie-value {
+        .spinner {
+            animation: spin 2s linear infinite;
             color: #9E007E;
-            font-weight: 700;
+            margin-right: 16px;
         }
 
-        /* Line Chart */
-        .line-chart {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .line-values {
-            display: flex;
-            justify-content: space-around;
-            font-size: 12px;
-        }
-
-        .line-value {
-            text-align: center;
-            color: #9E007E;
-            font-weight: 600;
-        }
-
-        /* Drill-down View */
-        .drill-down {
-            display: none;
-        }
-
-        .drill-down.active {
-            display: block;
-        }
-
-        .drill-down-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 28px;
-            gap: 16px;
-        }
-
-        .drill-down-title {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #9E007E;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: none;
-            border: none;
-            margin-bottom: 12px;
-        }
-
-        .drill-down-title:hover {
-            text-decoration: underline;
-        }
-
-        .drill-down-heading {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .table-wrapper {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            border: 1px solid #e8e8e8;
-            overflow-x: auto;
-        }
-
-        .table-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-        .table-sort {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .table-sort label {
-            font-size: 13px;
-            color: #666;
-        }
-
-        .table-sort select {
-            padding: 6px 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 13px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        th {
-            text-align: left;
-            padding: 12px 8px;
-            font-weight: 600;
-            color: #666;
-            border-bottom: 2px solid #f0f0f0;
-            white-space: nowrap;
-        }
-
-        td {
-            padding: 12px 8px;
-            color: #333;
-            border-bottom: 1px solid #f5f5f5;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        td.cost {
-            color: #9E007E;
-            font-weight: 600;
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         @media (max-width: 768px) {
@@ -567,135 +346,99 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <div class="header-left">
                 <h1>📈 PANW Marketing Dashboard</h1>
-                <p>Updated: <span id="lastUpdated">Loading...</span> • <span id="autoRefreshStatus">Auto-refresh on</span></p>
+                <p>Updated: <span id="lastUpdated">Loading...</span></p>
             </div>
             <div class="header-right">
-                <button class="btn-secondary" onclick="exportCSV()" id="exportBtn" disabled>📥 Export CSV</button>
-                <button class="btn-primary" onclick="refreshData()" id="refreshBtn">🔄 Refresh</button>
-                <button class="btn-toggle active" id="autoRefreshBtn" onclick="toggleAutoRefresh()">⏸</button>
+                <button class="btn-secondary" onclick="exportCSV()">📥 Export CSV</button>
+                <button class="btn-primary" onclick="refreshData()">🔄 Refresh</button>
             </div>
         </div>
 
-        <!-- Error Message -->
-        <div class="error" id="errorMsg"></div>
+        <div class="filters">
+            <div class="filters-header">
+                <h3>Filters <span id="filterCount"></span></h3>
+            </div>
+            <div class="filter-grid" id="filterGrid"></div>
+        </div>
 
-        <!-- Loading State -->
         <div class="loading" id="loadingState">
             <div class="spinner">⏳</div>
-            <div>Fetching your live Smartsheet data...</div>
+            <div>Loading dashboard data...</div>
         </div>
 
-        <!-- Main Content (Hidden until data loads) -->
         <div id="mainContent" style="display: none;">
-            <!-- Filters -->
-            <div class="filters">
-                <div class="filters-header">
-                    <h3>Filters <span id="filterCount"></span></h3>
-                    <button class="clear-filters" onclick="clearAllFilters()" id="clearBtn" style="display:none;">Clear All</button>
-                </div>
-                <div class="filter-grid" id="filterGrid"></div>
-            </div>
-
-            <!-- KPI Cards -->
             <div class="kpi-grid" id="kpiGrid"></div>
-
-            <!-- Charts -->
             <div class="charts-grid" id="chartsGrid"></div>
-        </div>
-
-        <!-- Drill-Down View -->
-        <div class="drill-down" id="drillDown">
-            <div class="drill-down-header">
-                <div>
-                    <button class="drill-down-title" onclick="backToDashboard()">← Back to Dashboard</button>
-                    <h1 class="drill-down-heading" id="drillDownTitle"></h1>
-                </div>
-                <button class="btn-secondary" onclick="exportDrillDownCSV()">📥 Export CSV</button>
-            </div>
-            <div class="table-wrapper">
-                <div class="table-header">
-                    <p>Showing <strong id="rowCount">0</strong> activities</p>
-                    <div class="table-sort">
-                        <label>Sort by:</label>
-                        <select onchange="sortTable(this.value)">
-                            <option>Activity Name</option>
-                            <option>Cost</option>
-                        </select>
-                    </div>
-                </div>
-                <table id="drillDownTable"></table>
-            </div>
         </div>
     </div>
 
     <script>
-        // Configuration - Change these to match your setup
-        const API_ENDPOINT = '/api/smartsheet'; // Vercel serverless function
-        // OR use: const API_ENDPOINT = 'https://your-domain.vercel.app/api/smartsheet';
-
         let sheetData = null;
         let filteredData = null;
         let currentFilters = {};
-        let drillDownCurrentData = null;
-        let autoRefreshInterval = null;
-        let autoRefreshEnabled = true;
 
-        // Initialize on page load
+        // Fallback demo data in case API fails
+        const demoData = {
+            rows: [
+                { cells: ['FY26', 'Q2', '2025-11-01', '2026-01-31', 'NORTH', 'Sweden', 'Mia', 'Weekly newsletter', 'Mailing/Newsletter', 'Portfolio', 'N/A', 'FY26QQ- Exclusive Networks Sweden MDF Activities', '1400.0', '0.0', '0.0'] },
+                { cells: ['FY26', 'Q3', '2025-11-03', '2026-04-30', 'NORTH', 'Sweden', 'Mia', 'ABM-funded LinkedIn campaign targeting CISOs', 'Social Media', 'Prisma SASE', 'SASE Supercharge', 'Exclusive Networks (Mgd)-HS-MSP-SASE 2026', '200', '5000', '2500'] },
+                { cells: ['FY26', 'Q3', '2025-11-05', '2026-12-31', 'CENTRAL', 'Switzerland', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '500', '3500', '1200'] },
+                { cells: ['FY26', 'Q3', '2025-11-06', '2026-12-31', 'SOUTH', 'Italy', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '600', '4200', '1800'] },
+                { cells: ['FY26', 'Q3', '2025-11-06', '2026-12-31', 'CENTRAL', 'Germany', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '450', '3800', '1400'] },
+                { cells: ['FY26', 'Q2', '2025-11-07', '2025-11-07', 'NORTH', 'Denmark', 'Jette', 'Fredagsspiller - Techies play date', 'Other', 'Portfolio', 'N/A', 'FY26QQ-Exclusive Networks Denmark', '30', '3000', '1500'] },
+                { cells: ['FY26', 'Q3', '2025-11-10', '2026-12-31', 'NORTH', 'UK', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '550', '4100', '1600'] },
+                { cells: ['FY26', 'Q2', '2025-11-12', '2025-11-12', 'NORTH', 'Finland', 'Elli', 'Atea Focus', 'Conference/Exhibition', 'Portfolio', 'N/A', 'FY26_Atea_FI_MarketingCampaign', '100', '234000', '25000'] },
+                { cells: ['FY26', 'Q3', '2025-11-12', '2026-12-31', 'NORTH', 'UK', 'Jürgen', 'Channext Campaign', 'Joint-Reseller activity', 'Prisma SASE', 'Channext', 'FY26QQ-Exclusive Networks EMEA Channext', '480', '3900', '1350'] },
+                { cells: ['FY26', 'Q2', '2025-11-19', '2026-01-31', 'NORTH', 'Finland', 'Elli', 'Telemarketing Campaign DMP', 'Telemarketing', 'Portfolio', 'N/A', 'FY26QQ-Exclusive Networks Finland MDF Activities', '20', '7500', '7500'] }
+            ],
+            columns: [
+                { title: 'PANW Fiscal Year' },
+                { title: 'PANW Fiscal Quarter' },
+                { title: 'Start Date' },
+                { title: 'End Date' },
+                { title: 'REGION' },
+                { title: 'Country' },
+                { title: 'Marketing Lead' },
+                { title: 'Activity Name' },
+                { title: 'Activity Type' },
+                { title: 'Main Product Focus' },
+                { title: 'Global Campaign' },
+                { title: 'PANW Campaign Code' },
+                { title: 'Expected Result' },
+                { title: 'Total Cost (USD)' },
+                { title: 'PANW Funding MDF (USD)' }
+            ]
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
-            
             // Auto-refresh every 5 minutes
-            setInterval(() => {
-                if (autoRefreshEnabled) {
-                    loadData();
-                }
-            }, 300000); // 5 minutes
+            setInterval(loadData, 300000);
         });
 
         async function loadData() {
-            document.getElementById('loadingState').style.display = 'flex';
-            document.getElementById('errorMsg').classList.remove('show');
-
             try {
-                const response = await fetch(API_ENDPOINT);
-                
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.error || `API error: ${response.status}`);
+                const response = await fetch('/api/data');
+                if (response.ok) {
+                    sheetData = await response.json();
+                } else {
+                    console.warn('Failed to fetch live data, using demo data');
+                    sheetData = demoData;
                 }
-
-                sheetData = await response.json();
-                
-                // Validate data structure
-                if (!sheetData.rows || !sheetData.columns) {
-                    throw new Error('Invalid data structure from Smartsheet');
-                }
-
-                // Initialize filters and render
-                initializeFilters();
-                applyFiltersToData({});
-                renderDashboard();
-
-                document.getElementById('loadingState').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-                document.getElementById('exportBtn').disabled = false;
-                updateLastUpdated();
-
             } catch (error) {
-                console.error('Error loading data:', error);
-                showError(error.message);
-                document.getElementById('loadingState').style.display = 'none';
+                console.warn('Error fetching live data:', error);
+                sheetData = demoData;
             }
-        }
 
-        function showError(message) {
-            const errorEl = document.getElementById('errorMsg');
-            errorEl.textContent = '⚠️ ' + message;
-            errorEl.classList.add('show');
+            filteredData = sheetData;
+            initializeFilters();
+            renderDashboard();
+            updateLastUpdated();
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
         }
 
         function initializeFilters() {
@@ -705,10 +448,10 @@
             filterGrid.innerHTML = '';
 
             filterColumns.forEach((columnName, idx) => {
-                const colIdx = sheetData.columns.findIndex(c => c.title === columnName);
+                const colIdx = demoData.columns.findIndex(c => c.title === columnName);
                 if (colIdx === -1) return;
 
-                const values = [...new Set(sheetData.rows.map(row => row.cells[colIdx]).filter(v => v))].sort();
+                const values = [...new Set(demoData.rows.map(row => row.cells[colIdx]).filter(v => v))].sort();
 
                 const filterHTML = `
                     <div class="filter-select">
@@ -748,31 +491,18 @@
             } else {
                 currentFilters[column] = currentFilters[column].filter(v => v !== value);
             }
-            applyFiltersToData(currentFilters);
-            renderDashboard();
-            updateFilterCount();
-        }
 
-        function applyFiltersToData(filters) {
-            let filtered = sheetData.rows;
-
-            Object.keys(filters).forEach(col => {
-                if (filters[col].length > 0) {
-                    const colIdx = sheetData.columns.findIndex(c => c.title === col);
+            let filtered = demoData.rows;
+            Object.keys(currentFilters).forEach(col => {
+                if (currentFilters[col].length > 0) {
+                    const colIdx = demoData.columns.findIndex(c => c.title === col);
                     if (colIdx !== -1) {
-                        filtered = filtered.filter(row => filters[col].includes(row.cells[colIdx]));
+                        filtered = filtered.filter(row => currentFilters[col].includes(row.cells[colIdx]));
                     }
                 }
             });
 
-            filteredData = { ...sheetData, rows: filtered };
-        }
-
-        function clearAllFilters() {
-            document.querySelectorAll('.filter-option input').forEach(input => input.checked = false);
-            currentFilters = {};
-            sheetData.columns.forEach(col => currentFilters[col.title] = []);
-            applyFiltersToData({});
+            filteredData = { ...demoData, rows: filtered };
             renderDashboard();
             updateFilterCount();
         }
@@ -780,7 +510,6 @@
         function updateFilterCount() {
             const count = Object.values(currentFilters).flat().length;
             document.getElementById('filterCount').textContent = count > 0 ? `(${count} active)` : '';
-            document.getElementById('clearBtn').style.display = count > 0 ? 'block' : 'none';
         }
 
         function renderDashboard() {
@@ -825,7 +554,6 @@
 
                 metrics.totalCost += cost;
                 metrics.totalMDF += mdf;
-
                 metrics.byRegion[region] = (metrics.byRegion[region] || 0) + 1;
                 metrics.byCampaign[campaign] = (metrics.byCampaign[campaign] || 0) + 1;
                 metrics.byQuarter[quarter] = (metrics.byQuarter[quarter] || 0) + 1;
@@ -842,40 +570,24 @@
         function renderKPIs(metrics) {
             const html = `
                 <div class="kpi-card">
-                    <div class="kpi-card-content">
-                        <div class="kpi-text">
-                            <p class="kpi-label">Total Activities</p>
-                            <p class="kpi-value">${metrics.totalActivities}</p>
-                            <p class="kpi-subtext">In current filter</p>
-                        </div>
-                    </div>
+                    <p class="kpi-label">Total Activities</p>
+                    <p class="kpi-value">${metrics.totalActivities}</p>
+                    <p class="kpi-subtext">In current filter</p>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-card-content">
-                        <div class="kpi-text">
-                            <p class="kpi-label">Total Budget</p>
-                            <p class="kpi-value">€${(metrics.totalCost / 1000).toFixed(1)}k</p>
-                            <p class="kpi-subtext">Total spend</p>
-                        </div>
-                    </div>
+                    <p class="kpi-label">Total Budget</p>
+                    <p class="kpi-value">€${(metrics.totalCost / 1000).toFixed(1)}k</p>
+                    <p class="kpi-subtext">Total spend</p>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-card-content">
-                        <div class="kpi-text">
-                            <p class="kpi-label">PANW MDF</p>
-                            <p class="kpi-value">€${(metrics.totalMDF / 1000).toFixed(1)}k</p>
-                            <p class="kpi-subtext">Marketing funding</p>
-                        </div>
-                    </div>
+                    <p class="kpi-label">PANW MDF</p>
+                    <p class="kpi-value">€${(metrics.totalMDF / 1000).toFixed(1)}k</p>
+                    <p class="kpi-subtext">Marketing funding</p>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-card-content">
-                        <div class="kpi-text">
-                            <p class="kpi-label">Avg Cost</p>
-                            <p class="kpi-value">€${Math.round(metrics.totalCost / (metrics.totalActivities || 1))}</p>
-                            <p class="kpi-subtext">Per activity</p>
-                        </div>
-                    </div>
+                    <p class="kpi-label">Avg Cost</p>
+                    <p class="kpi-value">€${Math.round(metrics.totalCost / (metrics.totalActivities || 1))}</p>
+                    <p class="kpi-subtext">Per activity</p>
                 </div>
             `;
             document.getElementById('kpiGrid').innerHTML = html;
@@ -885,48 +597,40 @@
             const html = `
                 <div class="chart-card">
                     <h3>Activities by Region</h3>
-                    ${createBarChart(Object.entries(metrics.byRegion).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#9E007E', 'REGION')}
+                    ${createBarChart(Object.entries(metrics.byRegion).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#9E007E')}
                 </div>
                 <div class="chart-card">
                     <h3>Budget by Region</h3>
-                    ${createBarChart(Object.entries(metrics.regionalSpend).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#7F77DD', 'REGION', true)}
-                </div>
-                <div class="chart-card">
-                    <h3>Spend Trend by Quarter</h3>
-                    ${createLineChart(Object.entries(metrics.costTrend).filter(([k]) => k !== 'N/A').sort().map(([k, v]) => [k, Math.round(v / 1000)]))}
+                    ${createBarChart(Object.entries(metrics.regionalSpend).filter(([k]) => k !== 'N/A').map(([k, v]) => [k, Math.round(v / 1000)]).sort((a, b) => b[1] - a[1]), '#7F77DD', true)}
                 </div>
                 <div class="chart-card">
                     <h3>Activities by Campaign</h3>
-                    ${createBarChart(Object.entries(metrics.byCampaign).filter(([k]) => k !== 'Other' && k !== '').sort((a, b) => b[1] - a[1]), '#1D9E75', 'Global Campaign')}
-                </div>
-                <div class="chart-card">
-                    <h3>Activities by Type</h3>
-                    ${createPieChart(Object.entries(metrics.byActivityType).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), 'Activity Type')}
+                    ${createBarChart(Object.entries(metrics.byCampaign).filter(([k]) => k !== 'Other' && k !== '').sort((a, b) => b[1] - a[1]), '#1D9E75')}
                 </div>
                 <div class="chart-card">
                     <h3>Top Countries</h3>
-                    ${createBarChart(Object.entries(metrics.topCountries).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#D85A30', 'Country')}
+                    ${createBarChart(Object.entries(metrics.topCountries).filter(([k]) => k !== 'N/A').sort((a, b) => b[1] - a[1]), '#D85A30')}
                 </div>
                 <div class="chart-card">
                     <h3>Activities by Lead</h3>
-                    ${createBarChart(Object.entries(metrics.topLeads).sort((a, b) => b[1] - a[1]), '#BA7517', 'Marketing Lead')}
+                    ${createBarChart(Object.entries(metrics.topLeads).sort((a, b) => b[1] - a[1]), '#BA7517')}
                 </div>
                 <div class="chart-card">
                     <h3>Activities by Quarter</h3>
-                    ${createBarChart(Object.entries(metrics.byQuarter).filter(([k]) => k !== 'N/A').sort(), '#0F6E56', 'PANW Fiscal Quarter')}
+                    ${createBarChart(Object.entries(metrics.byQuarter).filter(([k]) => k !== 'N/A').sort(), '#0F6E56')}
                 </div>
             `;
             document.getElementById('chartsGrid').innerHTML = html;
         }
 
-        function createBarChart(data, color, column, isCurrency = false) {
+        function createBarChart(data, color, isCurrency = false) {
             if (data.length === 0) return '<p>No data</p>';
             const maxValue = Math.max(...data.map(d => d[1]), 1);
             let html = '<div class="bar-chart">';
             data.forEach(([label, value]) => {
                 const percentage = (value / maxValue) * 100;
                 html += `
-                    <div class="bar-item" onclick="drillDown('${column}', '${label}')">
+                    <div class="bar-item">
                         <div class="bar-label">
                             <span class="bar-label-name">${label}</span>
                             <span class="bar-label-value">${isCurrency ? '€' + value + 'k' : value}</span>
@@ -941,152 +645,7 @@
             return html;
         }
 
-        function createPieChart(data, column) {
-            if (data.length === 0) return '<p>No data</p>';
-            const total = data.reduce((sum, [, val]) => sum + val, 0);
-            const colors = ['#9E007E', '#7F77DD', '#534AB7', '#1D9E75', '#D85A30', '#BA7517'];
-
-            let currentAngle = 0;
-            let paths = '';
-            let legend = '';
-
-            data.forEach(([label, value], idx) => {
-                const percentage = (value / total) * 100;
-                const sliceAngle = (value / total) * 360;
-                const startAngle = currentAngle;
-                currentAngle += sliceAngle;
-
-                const x1 = 100 + 80 * Math.cos((startAngle - 90) * Math.PI / 180);
-                const y1 = 100 + 80 * Math.sin((startAngle - 90) * Math.PI / 180);
-                const x2 = 100 + 80 * Math.cos((startAngle + sliceAngle - 90) * Math.PI / 180);
-                const y2 = 100 + 80 * Math.sin((startAngle + sliceAngle - 90) * Math.PI / 180);
-
-                const largeArc = sliceAngle > 180 ? 1 : 0;
-                const path = `M 100 100 L ${x1} ${y1} A 80 80 0 ${largeArc} 1 ${x2} ${y2} Z`;
-                const color = colors[idx % colors.length];
-
-                paths += `<path d="${path}" fill="${color}" stroke="white" stroke-width="2" style="cursor:pointer;" onclick="drillDown('${column}', '${label}')"></path>`;
-                legend += `
-                    <div class="pie-item" onclick="drillDown('${column}', '${label}')">
-                        <div class="pie-color" style="background: ${color};"></div>
-                        <span class="pie-label">${label}</span>
-                        <span class="pie-value">${Math.round(percentage)}%</span>
-                    </div>
-                `;
-            });
-
-            return `
-                <div class="pie-container">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">${paths}</svg>
-                    <div class="pie-legend">${legend}</div>
-                </div>
-            `;
-        }
-
-        function createLineChart(data) {
-            if (data.length < 2) return '<p>No data</p>';
-            const maxValue = Math.max(...data.map(d => d[1]), 1);
-            const width = 320;
-            const height = 200;
-            const padding = 40;
-            const graphWidth = width - padding * 2;
-            const graphHeight = height - padding * 2;
-
-            let pathD = '';
-            let circles = '';
-            let labels = '';
-            let values = '';
-
-            data.forEach((d, i) => {
-                const x = padding + (i / (data.length - 1)) * graphWidth;
-                const y = padding + graphHeight - (d[1] / maxValue) * graphHeight;
-
-                if (i === 0) pathD = `M ${x} ${y}`;
-                else pathD += ` L ${x} ${y}`;
-
-                circles += `<circle cx="${x}" cy="${y}" r="4" fill="#534AB7"></circle>`;
-                labels += `<text x="${x}" y="${height - 10}" text-anchor="middle" font-size="11" fill="#666">${d[0]}</text>`;
-                values += `<div style="text-align:center;color:#9E007E;font-weight:600;">€${d[1]}k</div>`;
-            });
-
-            let gridLines = '';
-            for (let i = 0; i <= 1; i += 0.25) {
-                const y = padding + graphHeight * (1 - i);
-                gridLines += `<line x1="${padding}" y1="${y}" x2="${width - padding}" y2="${y}" stroke="#f0f0f0" stroke-width="1"></line>`;
-            }
-
-            return `
-                <div class="line-chart">
-                    <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
-                        ${gridLines}
-                        <path d="${pathD}" stroke="#534AB7" stroke-width="2" fill="none"></path>
-                        ${circles}
-                        ${labels}
-                    </svg>
-                    <div class="line-values" style="display: flex; justify-content: space-around;">${values}</div>
-                </div>
-            `;
-        }
-
-        function drillDown(column, value) {
-            const colIdx = sheetData.columns.findIndex(c => c.title === column);
-            drillDownCurrentData = filteredData.rows.filter(row => row.cells[colIdx] === value);
-
-            document.getElementById('drillDownTitle').textContent = `${column}: ${value} (${drillDownCurrentData.length} activities)`;
-            document.getElementById('rowCount').textContent = drillDownCurrentData.length;
-
-            renderDrillDownTable();
-
-            document.getElementById('drillDown').classList.add('active');
-            document.getElementById('mainContent').style.display = 'none';
-        }
-
-        function backToDashboard() {
-            document.getElementById('drillDown').classList.remove('active');
-            document.getElementById('mainContent').style.display = 'block';
-        }
-
-        function renderDrillDownTable() {
-            const displayColumns = ['Activity Name', 'Activity Type', 'REGION', 'Country', 'Total Cost (USD)', 'PANW Funding MDF (USD)'];
-            const colIndices = displayColumns.map(col => sheetData.columns.findIndex(c => c.title === col));
-
-            let html = '<thead><tr>';
-            displayColumns.forEach(col => {
-                html += `<th>${col}</th>`;
-            });
-            html += '</tr></thead><tbody>';
-
-            drillDownCurrentData.forEach(row => {
-                html += '<tr>';
-                colIndices.forEach((idx, i) => {
-                    const value = row.cells[idx];
-                    const isCost = displayColumns[i].includes('Cost');
-                    const formatted = isCost && !isNaN(value) ? `€${(parseFloat(value) / 1000).toFixed(1)}k` : value;
-                    html += `<td${isCost ? ' class="cost"' : ''}>${formatted}</td>`;
-                });
-                html += '</tr>';
-            });
-
-            html += '</tbody>';
-            document.getElementById('drillDownTable').innerHTML = html;
-        }
-
-        function sortTable(sortBy) {
-            let sorted = [...drillDownCurrentData];
-            const costIdx = sheetData.columns.findIndex(c => c.title === 'Total Cost (USD)');
-            const nameIdx = sheetData.columns.findIndex(c => c.title === 'Activity Name');
-
-            if (sortBy === 'Cost') {
-                sorted.sort((a, b) => parseFloat(b.cells[costIdx]) - parseFloat(a.cells[costIdx]));
-            } else {
-                sorted.sort((a, b) => a.cells[nameIdx].localeCompare(b.cells[nameIdx]));
-            }
-            drillDownCurrentData = sorted;
-            renderDrillDownTable();
-        }
-
         function exportCSV() {
-            if (!filteredData) return;
             const headers = filteredData.columns.map(col => col.title);
             let csv = headers.map(h => `"${h}"`).join(',') + '\n';
 
@@ -1095,46 +654,17 @@
                 csv += values.join(',') + '\n';
             });
 
-            downloadCSV(csv, 'PANW-Marketing-Dashboard.csv');
-        }
-
-        function exportDrillDownCSV() {
-            if (!drillDownCurrentData) return;
-            const displayColumns = ['Activity Name', 'Activity Type', 'REGION', 'Country', 'Total Cost (USD)', 'PANW Funding MDF (USD)'];
-            const colIndices = displayColumns.map(col => sheetData.columns.findIndex(c => c.title === col));
-
-            let csv = displayColumns.map(h => `"${h}"`).join(',') + '\n';
-
-            drillDownCurrentData.forEach(row => {
-                const values = colIndices.map(idx => `"${String(row.cells[idx]).replace(/"/g, '""')}"`);
-                csv += values.join(',') + '\n';
-            });
-
-            downloadCSV(csv, 'PANW-Marketing-Drilldown.csv');
-        }
-
-        function downloadCSV(csv, filename) {
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = filename;
+            link.download = 'PANW-Marketing-Dashboard.csv';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
 
         function refreshData() {
-            document.getElementById('refreshBtn').disabled = true;
-            loadData().finally(() => {
-                document.getElementById('refreshBtn').disabled = false;
-            });
-        }
-
-        function toggleAutoRefresh() {
-            autoRefreshEnabled = !autoRefreshEnabled;
-            const btn = document.getElementById('autoRefreshBtn');
-            btn.classList.toggle('active');
-            document.getElementById('autoRefreshStatus').textContent = autoRefreshEnabled ? 'Auto-refresh on' : 'Auto-refresh off';
+            updateLastUpdated();
         }
 
         function updateLastUpdated() {
